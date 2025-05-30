@@ -1,0 +1,74 @@
+/* Basic body styling to center content and set background */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the cube, sets up the 3D perspective */
+#container {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+/* The cube itself, enables 3D transformations and transitions */
+#cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.1s; /* Smooth transition for rotation */
+}
+
+/* Common styling for all faces of the cube */
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Individual face positioning and background colors */
+.front  { background: rgba(255, 0, 0, 0.7); transform: translateZ(150px); } /* Red */
+.back   { background: rgba(0, 255, 0, 0.7); transform: rotateY(180deg) translateZ(150px); } /* Green */
+.right  { background: rgba(0, 0, 255, 0.7); transform: rotateY(90deg) translateZ(150px); } /* Blue */
+.left   { background: rgba(255, 255, 0, 0.7); transform: rotateY(-90deg) translateZ(150px); } /* Yellow */
+.top    { background: rgba(255, 0, 255, 0.7); transform: rotateX(90deg) translateZ(150px); } /* Magenta */
+.bottom { background: rgba(0, 255, 255, 0.7); transform: rotateX(-90deg) translateZ(150px); } /* Cyan */
+
+/* Styling for the reset button */
+#resetCube {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease; /* Smooth transition for hover/active states */
+}
+
+/* Styling for reset button on hover */
+#resetCube:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+/* Styling for reset button when active/clicked */
+#resetCube:active {
+    background-color: #3e8e41; /* Even Darker Green */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transform: translateY(1px); /* Slight press down effect */
+}
