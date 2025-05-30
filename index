@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Canvas for particle animations -->
+    <canvas id="particleCanvas"></canvas>
     <!-- Container for the 3D cube, providing perspective -->
     <div id="container">
         <!-- The 3D cube itself, which will be rotated -->
