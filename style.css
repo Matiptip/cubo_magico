@@ -55,6 +55,13 @@ body {
     opacity: 0.9;
 }
 
+/* Highlight effect for the face most oriented towards the camera on hover */
+.face.hover-highlight {
+    border-color: #FFFFFF; /* Brighter border to indicate hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Subtle white glow */
+    /* Consider a slight increase in opacity if base opacity is lower, e.g., opacity: 1; */
+}
+
 /* Individual face positioning and background colors */
 .front  { background: rgba(255, 0, 0, 0.7); transform: translateZ(150px); } /* Red */
 .back   { background: rgba(0, 255, 0, 0.7); transform: rotateY(180deg) translateZ(150px); } /* Green */

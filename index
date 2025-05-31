@@ -50,6 +50,11 @@
         </select>
     </div>
 
+    <!-- Click Info Display -->
+    <div id="clickInfoDisplay" style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background-color: rgba(255, 255, 255, 0.85); padding: 8px 15px; border-radius: 5px; z-index: 10; font-family: Arial, sans-serif; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: none;">
+        Clicked on: <span id="clickedFaceName" style="font-weight: bold;">None</span>
+    </div>
+
     <!-- Link to the external JavaScript file for interactivity -->
     <script src="script.js"></script>
 
